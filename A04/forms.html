@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    td{
+      padding-left: 15px;
+      padding-right: 15px;
+      border-color: #98bf21;
+    }
+  </style>
+  <!-- With help from: http://www.w3schools.com/ -->
+</head>
+<body>
+<table>
+  <tr><table border ="1" width="100%">
+    <th><center><h1>Renee's Cool Website</h1></center></th>
+  </table>
+  <tr>
+    <table border ="1" width="100%"><td><p><a href="index.html">Home</a> <a href="forms.html">Forms</a></p></td></table>
+  <tr>
+    <table border ="1" width="100%"><td valign="top"><p><strong><center>Forms Summary</center></strong></p>
+      <center><p>HTML supports several different types of input.</p></center>
+    </td>
+      <td width="75%" valign="top"><p><strong>Forms Page</strong></p>
+        <form action="forms.html" method="get">
+          <!-- Get method appends the form-data to URL in name/value pairs -->
+          Favorite fruit:<br>
+          <input type="text" name="fruit">
+          <br>
+          Favorite vegetable:<br>
+          <input type="text" name="veg">
+        <p>Do you eat fruits daily? </p>
+          <input type="radio" name="eatfruit" value=yes">Yes
+          <br>
+          <input type="radio" name="eatfruit" value="no">No
+        <p>Do you eat vegetables daily?</p>
+          <input type="checkbox" name="eatveg" value=yes">Yes
+          <br>
+          <input type="checkbox" name="eatveg" value="no">No
+          <br><br>
+          First name: <input type="text" name="first">
+          <br>
+          Last name: <input type="text" name="last">
+          <br>
+          <p><button type="submit">Submit</button></p>
+        </form>
+      </td>
+    </table>
+</table>
+<footer><center>Copyright (c) Renee Yonamine</center></footer>
+</body>
+</html>
