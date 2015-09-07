@@ -2,9 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>My First ICS415 Webpage</title>
+  <link rel="stylesheet" type="text/css" href="layout.css">
+
 </head>
 <body>
 
+<header><img src="http://s15.postimg.org/sza15f85n/catgirllogosmaller.png"></header>
+
+<div class="main">
+  <div id="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="info.html">Information</a></li>
+    </ul>
+  </div>
+  <p>
+  <div class="sidebar"><p><strong>Form Summary Window</strong></p>
+    <p><a href="forms.html#necoform">Necomimi Order Form</a></p>
+  </div>
+  <div class="right"><p><strong><a name="necoform">Necomimi Order Form</a></strong></p>
+    <p>Since you've clicked the forms page, you must be interested in ordering some Necomimi cat ears. Here are some forms to help you get you started right meowww:</p>
+    <form action="forms.html" method="get">
+      <label for="background-color">Choose a color for your Necomimi cat ears:</label>
+      <input id="background-color" name="background-color" type="color" />
+      <br>
+      <label for="end-date">Please enter today's date and time:</label>
+      <input id="end-date" name="end-date" type="datetime-local">
+      <br>
+      <label for="start-date">Choose a delivery date:</label>
+      <input id="start-date" name="start-date" min="2015-09-15" max="2015-12-31" type="date">
+      <br>
+      <label for="email">Please enter your email:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <label for="bmonth">Month and year of birth: </label>
+      <input id="bmonth" name="bmonth" type="month" required>
+      <br><i>(This information is used to send you catgirl birthday cards during your birth month!)</i>
+      <br>
+      <label for="hsize">Headband size: </label>
+      <input type="number" id="hsize" min="0" max="5" step="0.5" name="headband-size">
+      <br>
+      <label for="ratesize">How sure are you that this size is correct?: </label>
+      <input id="ratesize" type="range" min="1" max="100" value="0">
+      <br>
+      <label for="search">Want to lookup headband sizes?: </label>
+      <input type="search" id="search" name="search">
+      <br>
+      <label for="url">Please copy and paste URL of the Necomimi ears you wish to purchase: </label>
+      <input type="url" id="url" name="url" required>
+      <br>
+      <input type="submit" value="Submit">
+      <br>
+
+    </form>
+  </div>
+</div>
+<footer><p>Copyright (c) Renee Yonamine</p></footer>
 </body>
 </html>
