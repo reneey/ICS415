@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Bootstrap Page</title>
+  <!-- Made with help from Bootswatch.com -->
+</head>
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#myTab a").click(function(e){
+      e.preventDefault();
+      $(this).tab('show');
+    });
+  });
+</script>
+</head>
+<body>
+<div class="container-fluid">
+  <header class="page-header">
+    <h1>Renee's Bootstrap Page</h1>
+  </header>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Home</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="forms.html">Forms <span class="sr-only">(current)</span></a></li>
+          <li><a href="#jotd">Joke of the Day</a></li>
+
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="panel-body">
+    <div class="jumbotron">
+      <div class="row"><div class="col-md-8">
+      <a name="jotd"><h1>Joke of the Day</h1></a>
+      <p>The difference between high school and college...</p>
+      <blockquote>
+      <i>[Person finishes his test before the rest of the class]</i>
+      <br>High school: Omg he knows everything!
+      <br>College: LOL he knows nothing!
+      </blockquote>
+      <p>!(false) // it's funny because it's true.</p></div>
+        <div class="col-md-4"><img src="http://s9.postimg.org/lgqz81sxr/11036622_10101362690379546_6188882504722003180_n.jpg" class="img-thumbnail" alt="Joke of the Day" width="300" height="300">
+          </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- By using column width 3 it is 1/4 of the page, since it's 12 columns total -->
+        <div class="col-md-3">
+          <p>This page contains jokes and button examples</p>
+        </div>
+
+        <div class="col-md-9">
+          <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#sectionA">Button and Button Groups</a></li>
+            <li><a href="#sectionB">Thumbnails</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="sectionA" class="tab-pane fade in active">
+              <h3>Buttons and Button Groups</h3>
+              <p>Here are my button examples:</p>
+              <a href="index.html" class="btn btn-warning">Home</a>
+              <a href="forms.html" class="btn btn-success">Forms</a>
+            </div>
+            <div id="sectionB" class="tab-pane fade">
+              <h3>Thumbnails</h3>
+              <p>Here is a thumbnail of the Joke of the Day:</p>
+              <img src="http://s9.postimg.org/lgqz81sxr/11036622_10101362690379546_6188882504722003180_n.jpg" class="img-thumbnail" alt="Joke of the Day" width="200" height="200">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">Copyright (c) Renee Yonamine</div>
+</div>
+</body>
+</html>
