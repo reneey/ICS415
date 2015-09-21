@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="myScript.js"></script>
+  <script>
+
+    document.write('<div class="panel-body"><div class="container-fluid"><div class="row"><div class="col-md-12">');
+    document.write('<tr><th>After you complete our form, your results will appear below: </th></tr></div></div></div></div>');
+
+    var results = document.location.search;
+    results = results.slice(1);
+    var array = results.split("&");
+    document.write('<div class="container-fluid">');
+
+    for(var i = 0; i < array.length; i++) {
+
+      if(results == null || results=="") {
+        document.write('<tr><td><i>...Please complete our form.</i></td></tr>');
+      } else {
+
+        document.write('<div class=row>');
+        document.write('<div class=col-md-1>');
+        document.write('<table border=1>');
+        document.write('<tr><td>' + array[i].slice(0, array[i].indexOf("=")) + '</table></td></tr></div>');
+        document.write('<div class=col-md-1>');
+        document.write('<table border=1>');
+        document.write('<tr><td>' + array[i].slice(array[i].indexOf("=") + 1) + '</table></td></tr></div>');
+        document.write('<div class=col-md-10>');
+        document.write('</div>');
+        document.write('</div>');
+      }}
+
+  </script>
+
+  <title>My DemoForm Page</title>
+</head>
+<body>
+<div class="container-fluid">
+
+  <header class="page-header">
+    <h1>Renee's Demo Form Page</h1>
+  </header>
+
+  <form name="myForm" action="demo_form.html" onsubmit="return validateForm()" method="get">
+    <div class="form-group">
+      <label for="username">User name: </label>
+      <input type="text" name="name" id="username">
+    </div>
+    <div class="form-group">
+      <label for="email">Email: </label>
+      <input type="email" name="email" id="email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password: </label>
+      <input type="password" name="password" id="password">
+    </div>
+    <div class="form-group">
+      <label for="confirm">Confirm Password: </label>
+      <input type="password" name="confirm" id="confirm">
+    </div>
+    <button type="submit" class="btn btn-danger">Submit</button>
+  </form>
+
+  <br><br><br>
+
+  <div class="well">
+    <p>...All done here?</p>
+    <p><a href="testGetAdd.html" class="btn btn-primary btn-xs">Click me to take you to the get/add class test page!</a></p>
+  </div>
+
+</div>
+</body>
+</html>

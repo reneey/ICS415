@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Bootstrap Page</title>
+  <!-- Made with help from Bootswatch.com & https://github.com/jacksylam/ics415f15/blob/master/IC/w4c2/script.js -->
+</head>
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#myTab a").click(function(e){
+      e.preventDefault();
+      $(this).tab('show');
+    });
+  });
+</script>
+
+<script>
+
+  document.write('<div class="panel-body"><div class="container-fluid"><div class="row"><div class="col-md-12">');
+  document.write('<tr><th>Here are the results of your form: </th></tr></div></div></div></div>');
+
+  var results = document.location.search;
+  results = results.slice(1);
+  var array = results.split("&");
+  document.write('<div class="container-fluid">');
+
+  for(var i = 0; i < array.length; i++) {
+
+    if(results == null || results=="") {
+      document.write('<tr><td>Please go to our forms page to fill out our form!</td></tr>');
+    } else {
+
+      document.write('<div class=row>');
+      document.write('<div class=col-md-1>');
+      document.write('<table border=1>');
+      document.write('<tr><td>' + array[i].slice(0, array[i].indexOf("=")) + '</table></td></tr></div>');
+      document.write('<div class=col-md-1>');
+      document.write('<table border=1>');
+      document.write('<tr><td>' + array[i].slice(array[i].indexOf("=") + 1) + '</table></td></tr></div>');
+      document.write('<div class=col-md-10>');
+      document.write('</div>');
+      document.write('</div>');
+  }}
+  document.write('<br><br>');
+
+</script>
+</head>
+<body>
+<div class="container-fluid">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Home</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="forms.html">Forms <span class="sr-only">(current)</span></a></li>
+          <li><a href="index.html#jotd">Joke of the Day</a></li>
+
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" name="search" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="panel-footer">Copyright (c) Renee Yonamine</div>
+</div>
+</body>
+</html>
