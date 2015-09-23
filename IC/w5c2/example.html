@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+      $("#hide").click(function(){
+        $("a:first").hide();
+      });
+      $("#show").click(function(){
+        $("a:first").show();
+      });
+
+      $("button").click(function(){
+        $.ajax({url: "demo.txt", async: false, success: function(result){
+          $("#div1").html(result);
+        }});
+      });
+
+    });
+  </script>
+
+  <title>jQuery/AJAX Example Page</title>
+</head>
+<body>
+<div class="container-fluid">
+
+  <header class="page-header">
+    <h1>...So jQuery, AJAX and Bootstrap meet up at a bar...</h1>
+  </header>
+
+  <div class="jumbotron">
+    <h1>jQuery Content</h1>
+    <p>Playing with jQuery animations...</p>
+    <p><a class="btn btn-primary btn-lg" id="hide">Click here to hide this button</a></p>
+    <p><a class="btn btn-warning btn-lg" id="show">Click here to make the button reappear</a></p>
+  </div>
+
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Playing with AJAX</h3>
+    </div>
+    <div class="panel-body">
+      <div id="div1"><h5>Click on the button below to load lyrics to "Happy as the Sun" by Tyrone Wells</h5></div>
+
+      <p><button>Show lyrics</button></p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
