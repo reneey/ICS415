@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="myScript.js"></script>
+  <title>My Form Page</title>
+</head>
+
+<!-- Made with help from stackoverflow.com/questions/1610214 -->
+
+<body>
+<div class="container">
+
+  <header class="page-header">
+    <h1>Renee's Form Page</h1>
+  </header>
+
+  <form>
+    <label for="input">Enter a URL from this directory.
+      <br>Hit submit to return the number of links on given page: </label>
+    <p><input type="url" id="input" placeholder="e.g. localhost/ICS415/A08.form.html"></p>
+  </form>
+
+  <p><button onclick="getLinks()" class="btn btn-success">Submit</button></p>
+
+  <hr>
+
+  <h4>Click one of the links below to go to the Steam FAQs page</h4>
+
+  <p><a href="faq.html">Click here to go to Steam FAQs</a></p>
+  <p><a href="faq.html">Click here to go to Steam FAQs</a></p>
+  <p><a href="faq.html">Click here to go to Steam FAQs</a></p>
+
+  <hr>
+
+</div>
+</body>
+</html>
